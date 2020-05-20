@@ -51,15 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ContextClass.cs" />
     <Compile Include="Groups.cs" />
-    <Compile Include="GroupUsers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Results.cs" />
     <Compile Include="Tests.cs" />
-    <Compile Include="TestsResults.cs" />
     <Compile Include="Users.cs" />
-    <Compile Include="UsersResults.cs" />
-    <Compile Include="UsersTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
