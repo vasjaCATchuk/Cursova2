@@ -36,7 +36,7 @@
             this.textBoxDescription = new System.Windows.Forms.TextBox();
             this.panelMain = new System.Windows.Forms.Panel();
             this.textBoxDate = new System.Windows.Forms.TextBox();
-            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.textBoxSubject = new System.Windows.Forms.TextBox();
             this.textBoxAuthor = new System.Windows.Forms.TextBox();
             this.listBox = new System.Windows.Forms.ListBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -45,11 +45,11 @@
             this.buttonNew = new System.Windows.Forms.Button();
             this.buttonBrowse = new System.Windows.Forms.Button();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBoxPassTime = new System.Windows.Forms.TextBox();
             this.buttonSave = new System.Windows.Forms.Button();
+            this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).BeginInit();
             this.SuspendLayout();
@@ -115,12 +115,12 @@
             this.textBoxDate.Size = new System.Drawing.Size(134, 20);
             this.textBoxDate.TabIndex = 16;
             // 
-            // textBoxName
+            // textBoxSubject
             // 
-            this.textBoxName.Location = new System.Drawing.Point(250, 26);
-            this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(134, 20);
-            this.textBoxName.TabIndex = 15;
+            this.textBoxSubject.Location = new System.Drawing.Point(250, 26);
+            this.textBoxSubject.Name = "textBoxSubject";
+            this.textBoxSubject.Size = new System.Drawing.Size(134, 20);
+            this.textBoxSubject.TabIndex = 15;
             // 
             // textBoxAuthor
             // 
@@ -136,6 +136,7 @@
             this.listBox.Name = "listBox";
             this.listBox.Size = new System.Drawing.Size(87, 394);
             this.listBox.TabIndex = 13;
+            this.listBox.SelectedIndexChanged += new System.EventHandler(this.listBox_SelectedIndexChanged);
             // 
             // panel1
             // 
@@ -169,6 +170,7 @@
             this.buttonRemove.TabIndex = 3;
             this.buttonRemove.Text = "Remove";
             this.buttonRemove.UseVisualStyleBackColor = true;
+            this.buttonRemove.Click += new System.EventHandler(this.buttonRemove_Click);
             // 
             // buttonNew
             // 
@@ -178,6 +180,7 @@
             this.buttonNew.TabIndex = 2;
             this.buttonNew.Text = "New";
             this.buttonNew.UseVisualStyleBackColor = true;
+            this.buttonNew.Click += new System.EventHandler(this.buttonNew_Click);
             // 
             // buttonBrowse
             // 
@@ -198,12 +201,12 @@
             this.textBox5.TabIndex = 24;
             this.textBox5.Text = "Pase Time :";
             // 
-            // textBox6
+            // textBoxPassTime
             // 
-            this.textBox6.Location = new System.Drawing.Point(250, 78);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(134, 20);
-            this.textBox6.TabIndex = 23;
+            this.textBoxPassTime.Location = new System.Drawing.Point(250, 78);
+            this.textBoxPassTime.Name = "textBoxPassTime";
+            this.textBoxPassTime.Size = new System.Drawing.Size(134, 20);
+            this.textBoxPassTime.TabIndex = 23;
             // 
             // buttonSave
             // 
@@ -213,6 +216,7 @@
             this.buttonSave.TabIndex = 5;
             this.buttonSave.Text = "Save";
             this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // Form1
             // 
@@ -220,7 +224,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(389, 383);
             this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBoxPassTime);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
@@ -228,12 +232,14 @@
             this.Controls.Add(this.textBoxDescription);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.textBoxDate);
-            this.Controls.Add(this.textBoxName);
+            this.Controls.Add(this.textBoxSubject);
             this.Controls.Add(this.textBoxAuthor);
             this.Controls.Add(this.listBox);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -250,7 +256,7 @@
         private System.Windows.Forms.TextBox textBoxDescription;
         private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.TextBox textBoxDate;
-        private System.Windows.Forms.TextBox textBoxName;
+        private System.Windows.Forms.TextBox textBoxSubject;
         private System.Windows.Forms.TextBox textBoxAuthor;
         private System.Windows.Forms.ListBox listBox;
         private System.Windows.Forms.Panel panel1;
@@ -262,7 +268,7 @@
         private System.Windows.Forms.BindingSource bindingSource;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBoxPassTime;
         private System.Windows.Forms.Button buttonSave;
     }
 }

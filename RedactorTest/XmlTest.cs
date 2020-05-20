@@ -35,6 +35,10 @@ namespace Xml2CSharp
         public Answers Answers { get; set; }
         [XmlAttribute(AttributeName = "Difficulty")]
         public string Difficulty { get; set; }
+        public override string ToString()
+        {
+            return Description;
+        }
     }
 
     [XmlRoot(ElementName = "Tests")]
@@ -42,10 +46,6 @@ namespace Xml2CSharp
     {
         [XmlElement(ElementName = "Test")]
         public List<Test> Test { get; set; }
-        [XmlAttribute(AttributeName = "xsi", Namespace = "http://www.w3.org/2000/xmlns/")]
-        public string Xsi { get; set; }
-        [XmlAttribute(AttributeName = "xsd", Namespace = "http://www.w3.org/2000/xmlns/")]
-        public string Xsd { get; set; }
         [XmlAttribute(AttributeName = "Author")]
         public string Author { get; set; }
         [XmlAttribute(AttributeName = "Subject")]
